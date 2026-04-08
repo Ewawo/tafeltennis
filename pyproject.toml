@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tafeltennis"
+version = "0.1.0"
+description = "Scheduled Google Chat notifier driven by pyproject.toml and .env"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "holidays>=0.71",
+]
+
+[project.scripts]
+tafeltennis = "tafeltennis.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tafeltennis"]
+
+[tool.tafeltennis]
+schedule_utc = "06:19"
+message_text = "TUNGTUNGTUNG SAHUR \n🏓 Tafeltennistijd 🏓"
+poll_interval_seconds = 30
+state_file = ".tafeltennis-state.json"
