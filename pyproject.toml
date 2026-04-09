@@ -19,7 +19,7 @@ tafeltennis = "tafeltennis.cli:main"
 packages = ["src/tafeltennis"]
 
 [tool.tafeltennis]
-schedule_utc = "06:19"
+schedule_utc = "12:30"
 message_text = "TUNGTUNGTUNG SAHUR \n🏓 Tafeltennistijd 🏓"
 poll_interval_seconds = 30
 state_file = ".tafeltennis-state.json"
